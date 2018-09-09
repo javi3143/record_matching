@@ -1,0 +1,8 @@
+flask-wtf
+flask
+wtforms
+flask-bootstrap
+flask-uploads
+recordlinkage
+tablib
+boto3

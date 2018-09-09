@@ -1,0 +1,28 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}" type="image/x-icon">
+  <link rel="icon" href="{{ url_for('static', filename='favicon.ico') }}" type="image/x-icon">
+  <link rel=stylesheet type=text/css href="{{ url_for('static', filename='css/style.css') }}"/>
+  <title>Show Matches</title>
+</head>
+
+<body>
+    <form style="text-align: right;">
+        <input type="button" value="Go Index" onclick="location.href='/'"/>
+    </form>
+
+    <form style="text-align: right;">
+            <input type="button" value="Go back!" onclick="history.back()"/>
+    </form>
+
+    <div class="table">
+        {% block body %}
+        {{ matches|safe }}
+        {% endblock %}  
+    </div>
+</body>
+</html>
+
